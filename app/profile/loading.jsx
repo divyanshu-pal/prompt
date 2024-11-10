@@ -7,7 +7,7 @@ const Loading = () => {
         src='assets/icons/loader.svg'
         width={50}
         height={50}
-        alt='loader'
+        alt='loaderr'
         className='object-contain'
       />
     </div>
