@@ -7,7 +7,7 @@ It enables users to generate creative prompts with AI assistance, search communi
 
 ## 🚀 Live Demo
 
-[🔗 Visit PromptlyAI](#) *https://promptlyai.vercel.app/*
+https://promptlyai.vercel.app/
 
 ---
 
@@ -41,17 +41,22 @@ It enables users to generate creative prompts with AI assistance, search communi
 ### 🏡 Home Page
 Discover and browse AI-powered prompts from creators around the world.
 
-![Home Page](assets/homepage.png)
+<img width="1920" height="4250" alt="image" src="https://github.com/user-attachments/assets/c0e8df45-1e5f-4336-a8cb-2fa38b29f4e9" />
+
 
 ### ✍️ Create Post Page
 Generate prompts with the help of AI and share them instantly.
 
-![Create Post Page](assets/createpost.png)
+<img width="1920" height="1037" alt="image" src="https://github.com/user-attachments/assets/48f0fed2-637a-4fb0-85f5-d548fe852608" />
+
 
 ### 👤 Profile Page
 Manage your posts — edit or delete them from your personal profile.
 
-![Profile Page](assets/profilepage.png)
+<img width="1907" height="827" alt="image" src="https://github.com/user-attachments/assets/9e505453-43fe-4314-8577-e81297e6a04a" />
+
+### Google Authentication
+<img width="1586" height="740" alt="image" src="https://github.com/user-attachments/assets/ec7b6013-efa6-480d-a987-c819a4e3d655" />
 
 ---
 
