@@ -19,8 +19,8 @@ const UpdatePrompt = () => {
       const data = await response.json();
 
       setPost({
-        prompt: data.prompt,
-        tag: data.tag,
+        prompt: data?.prompt,
+        tag: data?.tag,
       });
     };
 
@@ -37,8 +37,8 @@ const UpdatePrompt = () => {
       const response = await fetch(`/api/prompt/${promptId}`, {
         method: "PATCH",
         body: JSON.stringify({
-          prompt: post.prompt,
-          tag: post.tag,
+          prompt: post?.prompt,
+          tag: post?.tag,
         }),
       });
 

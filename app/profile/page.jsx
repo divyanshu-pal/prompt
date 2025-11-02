@@ -14,17 +14,17 @@ const MyProfile = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch(`/api/users/${session?.user.id}/posts`);
+      const response = await fetch(`/api/users/${session?.user?.id}/posts`);
       const data = await response.json();
 
       setMyPosts(data);
     };
 
-    if (session?.user.id) fetchPosts();
-  }, [session?.user.id]);
+    if (session?.user?.id) fetchPosts();
+  }, [session?.user?.id]);
 
   const handleEdit = (post) => {
-    router.push(`/update-prompt?id=${post._id}`);
+    router.push(`/update-prompt?id=${post?._id}`);
   };
 
   const handleDelete = async (post) => {
@@ -34,11 +34,11 @@ const MyProfile = () => {
 
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${post._id.toString()}`, {
+        await fetch(`/api/prompt/${post?._id.toString()}`, {
           method: "DELETE",
         });
 
-        const filteredPosts = myPosts.filter((item) => item._id !== post._id);
+        const filteredPosts = myPosts.filter((item) => item?._id !== post?._id);
 
         setMyPosts(filteredPosts);
       } catch (error) {

@@ -9,7 +9,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
     <div className='mt-16 prompt_layout'>
       {data.map((post) => (
         <PromptCard
-          key={post._id}
+          key={post?._id}
           post={post}
           handleTagClick={handleTagClick}
         />
@@ -41,9 +41,9 @@ const Feed = () => {
     const regex = new RegExp(searchtext, "i"); 
     return allPosts.filter(
       (item) =>
-        regex.test(item.creator.username) ||
-        regex.test(item.tag) ||
-        regex.test(item.prompt)
+        regex.test(item?.creator?.username) ||
+        regex.test(item?.tag) ||
+        regex.test(item?.prompt)
     );
   };
 

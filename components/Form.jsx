@@ -19,7 +19,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
         model: 'llama3-8b-8192',
       });
 
-      const generatedText = chatCompletion.choices[0].message.content;
+      const generatedText = chatCompletion?.choices[0]?.message?.content;
       setPost({ ...post, prompt: generatedText });
     } catch (error) {
       console.error('Error generating text:', error);
@@ -52,7 +52,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
           />
           <button
             type='button'
-            onClick={() => generateText(post.prompt)}
+            onClick={() => generateText(post?.prompt)}
             disabled={loadingPrompt}
             className='mt-5 px-3 py-1 text-sm bg-gray-500 text-white rounded hover:bg-green-600'
           >
@@ -66,7 +66,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
             <span className='font-normal'> (#product, #webdevelopment, #idea, etc.)</span>
           </span>
           <input
-            value={post.tag}
+            value={post?.tag}
             onChange={(e) => setPost({ ...post, tag: e.target.value })}
             type='text'
             placeholder='#Tag'
