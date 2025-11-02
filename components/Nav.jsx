@@ -59,9 +59,9 @@ const Nav = () => {
               Object.values(providers).map((provider) => (
                 <button
                   type='button'
-                  key={provider.name}
+                  key={provider?.name}
                   onClick={() => {
-                    signIn(provider.id);
+                    signIn(provider?.id);
                   }}
                   className='black_btn'
                 >
@@ -77,7 +77,7 @@ const Nav = () => {
         {session?.user ? (
           <div className='flex'>
             <Image
-              src={session?.user.image}
+              src={session?.user?.image}
               width={37}
               height={37}
               className='rounded-full'
@@ -120,9 +120,9 @@ const Nav = () => {
               Object.values(providers).map((provider) => (
                 <button
                   type='button'
-                  key={provider.name}
+                  key={provider?.name}
                   onClick={() => {
-                    signIn(provider.id);
+                    signIn(provider?.id);
                   }}
                   className='black_btn'
                 >
